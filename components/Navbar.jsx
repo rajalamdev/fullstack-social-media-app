@@ -12,7 +12,7 @@ export default function Navbar({currentUser}) {
 
   return (
     !context.currentPath?.includes("settings") && (
-      <div className="flex z-30 justify-center w-full items-center border-t border-border-primary fixed bottom-7 left-0 right-0 bg-bg-primary gap-10 py-4">
+      <div className="flex z-30 justify-center w-full items-center border-t border-border-primary fixed bottom-0 left-0 right-0 bg-bg-primary gap-10 py-4">
         <Link href="/" className={`${context.currentPath === "/" ? "active" : ""}`}>
           <FontAwesomeIcon icon={faHome} size="lg" />
         </Link>
