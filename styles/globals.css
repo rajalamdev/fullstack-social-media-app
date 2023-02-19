@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --nav-primary: rgba(19, 17, 28, .8);
+        --bg-primary: rgb(19, 17, 28);
+        --bg-hover: rgb(26, 24, 35);
+        --text-primary: #fff;
+        --text-secondary: #ccc;
+        --header-primary: rgb(54, 90, 246);
+        --text-third: #899096;
+        --border-primary: #222;
+        --border-secondary: #777;
+    }
+
+    body {
+        @apply bg-bg-primary text-text-primary font-normal
+    }
+}
+
+@layer components {
+    input[type=file] {
+        @apply border-border-secondary border border-dashed w-[90%] mx-auto rounded px-4 py-3 focus:border-blue-500
+    }
+
+    input[type=file]::file-selector-button {
+        @apply bg-blue-600 border-none py-2 px-4 text-text-primary rounded
+    }
+}
+
+@layer utilities {
+    .sticky-nav {
+        transition-timing-function: ease;
+    }
+
+    .active {
+        @apply relative after:block after:absolute after:-bottom-[14px] after:w-[8px] after:left-0 after:right-0 after:mx-auto after:rounded-full after:h-[8px] after:bg-header-primary
+    }
+}
