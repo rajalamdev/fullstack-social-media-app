@@ -172,7 +172,7 @@ export default function Comments({data: {post, token, currentUser, currentI, pos
                 <div className="py-4 flex items-center gap-4 px-4">
                     <FontAwesomeIcon icon={faChevronLeft} size="lg" onClick={closeCommentHandler} className="cursor-pointer px-[8px] py-[4px] rounded-full" />
                     <div className="w-full relative flex flex-wrap">
-                        <input autoComplete="off" ref={inputRef} type="text" className="w-full py-2 resize-none bg-bg-primary block mx-auto h-10 rounded-full mt-1 outline-none self-center ring-1 ring-border-secondary px-4 focus:w-full transition-all duration-300 focus:ring-2 focus:ring-header-primary" name="name" onChange={(e) => {
+                        <input required autoComplete="off" ref={inputRef} type="text" className="w-full py-2 resize-none bg-bg-primary block mx-auto h-10 rounded-full mt-1 outline-none self-center ring-1 ring-border-secondary px-4 focus:w-full transition-all duration-300 focus:ring-2 focus:ring-header-primary" name="name" onChange={(e) => {
                             setComment(() => e.target.value)
                         }} value={comment} placeholder={`${isReply ? "Reply to " + usernameReply: "Comment as " + currentUser.username}`}></input>
                         <button type="submit">
